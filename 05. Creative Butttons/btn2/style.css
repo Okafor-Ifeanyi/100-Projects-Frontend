@@ -1,0 +1,60 @@
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    background-color: #ee88ee;
+    padding: 30px 50px;
+    border: 2px solid;
+    position: relative;
+    font-weight: bold;
+}
+
+a:before {
+    content: "Button";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: lightseagreen;
+    height: 100%;
+    width: 100%;
+    /* position */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Rotation */
+    transform: rotateX(270deg);
+    transform-origin: top;
+    transition: all 0.5s;
+}
+
+a::after {
+    content: "Button";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: lightcoral;
+    height: 100%;
+    width: 100%;
+    /* position */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     /* Rotation */
+     transform: rotateX(270deg);
+     transform-origin: top;
+     transition: all 0.5s;
+     transition-delay: 0.25s;
+}
+
+a:hover:before, a:hover:after {
+    transform: rotateX(0deg);
+    
+}
